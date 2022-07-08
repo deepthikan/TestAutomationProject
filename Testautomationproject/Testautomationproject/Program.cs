@@ -110,6 +110,27 @@ else
 {
     Console.WriteLine("Update failed.");
 }
+// Delete material
+
+driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[4]/a[4]/span")).Click();
+
+IWebElement deleteButton = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[5]/a[2]"));
+deleteButton.Click();
+Thread.Sleep(1500);
+driver.SwitchTo().Alert().Accept();
+Thread.Sleep(4000);
+
+if (driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[1]")).Text.Equals("Books Ed"))
+{
+    Console.WriteLine(" Deletion failed.");
+}
+else
+
+{
+    Console.WriteLine("Deletion Passed.");
+}
 
 driver.Close();
+
+
 
