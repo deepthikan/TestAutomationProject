@@ -82,17 +82,14 @@ IWebElement Editbutton = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/
 Editbutton.Click();
 Thread.Sleep(1500);
 //edit code textbox
-
 IWebElement editCodeButton = driver.FindElement(By.Id("Code"));
 editCodeButton.Clear();
 editCodeButton.SendKeys("Books Ed");
 //Edit Description
-
 IWebElement editDescription = driver.FindElement(By.Id("Description"));
 editDescription.Clear();
 editDescription.SendKeys("Books2022 Ed");
 //Edit New price
-
 Thread.Sleep(1500);
 IWebElement editPriceNew = driver.FindElement(By.XPath("//*[@id='TimeMaterialEditForm']/div/div[4]/div/span[1]/span/input[1]")); 
 IWebElement editPrice = driver.FindElement(By.Id("Price"));
