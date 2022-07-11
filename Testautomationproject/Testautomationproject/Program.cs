@@ -91,8 +91,16 @@ editCodeButton.SendKeys("Books Ed");
 IWebElement editDescription = driver.FindElement(By.Id("Description"));
 editDescription.Clear();
 editDescription.SendKeys("Books2022 Ed");
-//click Save Button
+//Edit New price
 
+Thread.Sleep(1500);
+IWebElement editPriceNew = driver.FindElement(By.XPath("//*[@id='TimeMaterialEditForm']/div/div[4]/div/span[1]/span/input[1]")); 
+IWebElement editPrice = driver.FindElement(By.Id("Price"));
+editPriceNew.Click(); 
+editPrice.Clear(); 
+editPriceNew.Click(); 
+editPrice.SendKeys("550");
+//click Save Button
 driver.FindElement(By.Id("SaveButton")).Click();
 Thread.Sleep(3000);
 //Go to last page
@@ -103,12 +111,12 @@ driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[4]/a[4]/span")).Click();
 
 if (driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[1]")).Text.Equals("Books Ed"))
 {
-    Console.WriteLine("Updated Succesfully.");
+    Console.WriteLine("Material Updated Succesfully,Test Passed");
 }
 else
 
 {
-    Console.WriteLine("Update failed.");
+    Console.WriteLine("Material has not been Updated, Test failed.");
 }
 // Delete material
 
@@ -118,16 +126,16 @@ IWebElement deleteButton = driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3
 deleteButton.Click();
 Thread.Sleep(1500);
 driver.SwitchTo().Alert().Accept();
-Thread.Sleep(4000);
+Thread.Sleep(10000);
 
 if (driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[1]")).Text.Equals("Books Ed"))
 {
-    Console.WriteLine(" Deletion failed.");
+    Console.WriteLine(" Material not deleted Test failed.");
 }
 else
 
 {
-    Console.WriteLine("Deletion Passed.");
+    Console.WriteLine("Material deleted Test Passed.");
 }
 
 driver.Close();
