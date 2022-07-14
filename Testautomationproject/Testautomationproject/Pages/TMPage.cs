@@ -1,6 +1,8 @@
 ﻿
 
 
+using Testautomationproject.Utilities;
+
 namespace Testautomationproject.Pages
 {
     public class TMPage
@@ -61,7 +63,8 @@ namespace Testautomationproject.Pages
             editDescription.Clear();
             editDescription.SendKeys("Books2022 Ed");
             //Edit New price
-            Thread.Sleep(1500);
+            WaitHelpers.WaitToBeClickable(driver, 5, "XPath", "//*[@id='TimeMaterialEditForm']/div/div[4]/div/span[1]/span/input[1]");
+
             IWebElement editPriceNew = driver.FindElement(By.XPath("//*[@id='TimeMaterialEditForm']/div/div[4]/div/span[1]/span/input[1]"));
             IWebElement editPrice = driver.FindElement(By.Id("Price"));
             editPriceNew.Click();
@@ -75,17 +78,16 @@ namespace Testautomationproject.Pages
 
             driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[4]/a[4]/span")).Click();
             Thread.Sleep(5000);
-
             //Validate updated Display message
 
             if (driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[1]")).Text.Equals("Books Ed"))
             {
-                Console.WriteLine("Material Updated Succesfully,Test Passed");
+                Console.WriteLine("Material Updated Succesfully,Test Pass");
             }
             else
 
             {
-                Console.WriteLine("Material has not been Updated, Test failed.");
+                Console.WriteLine("Material has not been Updated, Test fail.");
             }
         }
 
@@ -99,16 +101,16 @@ namespace Testautomationproject.Pages
             deleteButton.Click();
             Thread.Sleep(1500);
             driver.SwitchTo().Alert().Accept();
-            Thread.Sleep(10000);
+            Thread.Sleep(5000);
 
             if (driver.FindElement(By.XPath("//*[@id='tmsGrid']/div[3]/table/tbody/tr[last()]/td[1]")).Text.Equals("Books Ed"))
             {
-                Console.WriteLine(" Material not deleted Test failed.");
+                Console.WriteLine(" Material not deleted, Test fail.");
             }
             else
 
             {
-                Console.WriteLine("Material deleted Test Passed.");
+                Console.WriteLine("Material deleted successfully, Test Pass.");
             }
 
         }

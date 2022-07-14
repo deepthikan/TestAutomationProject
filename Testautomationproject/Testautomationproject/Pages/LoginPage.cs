@@ -1,5 +1,7 @@
 ﻿
 
+using Testautomationproject.Utilities;
+
 namespace Testautomationproject.Pages
 {
     public class LoginPage
@@ -18,6 +20,8 @@ namespace Testautomationproject.Pages
 
             IWebElement passwordTextbox = driver.FindElement(By.Id("Password"));
             passwordTextbox.SendKeys("123123");
+            WaitHelpers.WaitToBeClickable(driver, 5, "XPath", "//*[@id='loginForm']/form/div[3]/input[1]");
+
             //identify login button and click it
             IWebElement loginButton = driver.FindElement(By.XPath("//*[@id='loginForm']/form/div[3]/input[1]"));
             loginButton.Click();
