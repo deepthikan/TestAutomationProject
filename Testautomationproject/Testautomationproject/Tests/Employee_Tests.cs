@@ -8,6 +8,7 @@ using Testautomationproject.Utilities;
 
 namespace Testautomationproject.Tests
 {
+    [TestFixture]
     public class Employee_Tests : CommonDriver
     {
         [SetUp]

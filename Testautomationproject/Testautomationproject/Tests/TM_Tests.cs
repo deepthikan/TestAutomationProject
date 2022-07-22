@@ -27,7 +27,7 @@ namespace Testautomationproject.Tests
         public void EditTM()
         {
             TMPage tmpageobj = new TMPage();
-            tmpageobj.EditTM(driver);
+            tmpageobj.EditTM(driver,"po","p1","p2");
         } 
         [Test, Order(3), Description("check if user is able to delete material record")]
         public void DeleteTM()
