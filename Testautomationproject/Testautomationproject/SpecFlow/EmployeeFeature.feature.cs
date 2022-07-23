@@ -20,23 +20,23 @@ namespace Testautomationproject.SpecFlow
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "3.9.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("TMFeature")]
-    public partial class TMFeatureFeature
+    [NUnit.Framework.DescriptionAttribute("EmployeeFeature")]
+    public partial class EmployeeFeatureFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
         private static string[] featureTags = ((string[])(null));
         
-#line 1 "TMFeature.feature"
+#line 1 "EmployeeFeature.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SpecFlow", "TMFeature", "As a Turnup portal admin\r\nI would like to create, edit and delete Time and Materi" +
-                    "al record.\r\nSo that i can manage employees Time and Material successfully.", ProgrammingLanguage.CSharp, featureTags);
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "SpecFlow", "EmployeeFeature", "As a Turnup portal admin\r\nI would like to create, edit and delete Employee record" +
+                    "s.\r\nSo that i can manage employee records successfully.", ProgrammingLanguage.CSharp, featureTags);
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -75,15 +75,15 @@ namespace Testautomationproject.SpecFlow
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("1)Create Material Record with valid data")]
+        [NUnit.Framework.DescriptionAttribute("1)Create Employees Record with valid data")]
         [NUnit.Framework.CategoryAttribute("tag1")]
-        public void _1CreateMaterialRecordWithValidData()
+        public void _1CreateEmployeesRecordWithValidData()
         {
             string[] tagsOfScenario = new string[] {
                     "tag1"};
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1)Create Material Record with valid data", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 9
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("1)Create Employees Record with valid data", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 8
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -93,35 +93,36 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
+#line 9
+ testRunner.Given("I logged into Turnup portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
 #line 10
- testRunner.Given("I logged into Turnup portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.When("I navigate to Employees page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 11
- testRunner.When("I navigate to Time and Material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I create a new Employee record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 12
- testRunner.When("I create a new Material record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 13
- testRunner.Then("The record should be created successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The employee record should be created successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("2)Edit existing material with valid data")]
-        [NUnit.Framework.TestCaseAttribute("Books", "Harry Potter", "$100.00", null)]
-        [NUnit.Framework.TestCaseAttribute("Pen", "Red", "$30.00", null)]
-        [NUnit.Framework.TestCaseAttribute("Pencil", "Natraj", "$15.00", null)]
-        public void _2EditExistingMaterialWithValidData(string code, string description, string price, string[] exampleTags)
+        [NUnit.Framework.DescriptionAttribute("2)Edit existing employee with valid data")]
+        [NUnit.Framework.TestCaseAttribute("DEEPTHI", "DAKSHAYANI", "@utomatioN12", "@utomatioN12", null)]
+        [NUnit.Framework.TestCaseAttribute("Emily", "EMILY", "@utomatioN12", "@utomatioN12", null)]
+        [NUnit.Framework.TestCaseAttribute("KAVYA", "kavya", "@utomatioN12", "@utomatioN12", null)]
+        public void _2EditExistingEmployeeWithValidData(string name, string username, string password, string retypepassword, string[] exampleTags)
         {
             string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            argumentsOfScenario.Add("Code", code);
-            argumentsOfScenario.Add("Description", description);
-            argumentsOfScenario.Add("Price", price);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2)Edit existing material with valid data", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            argumentsOfScenario.Add("Name", name);
+            argumentsOfScenario.Add("Username", username);
+            argumentsOfScenario.Add("Password", password);
+            argumentsOfScenario.Add("Retypepassword", retypepassword);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("2)Edit existing employee with valid data", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 15
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -133,28 +134,28 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 16
-    testRunner.Given("I logged into Turnup portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+    testRunner.Given("I logged into Turnup portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 17
- testRunner.When("I navigate to Time and Material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I navigate to Employees page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 18
- testRunner.When(string.Format("I update \'{0}\',\'{1}\' and \'{2}\' of an existing material record", code, description, price), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("I update \'{0}\',\'{1}\',\'{2}\' and \'{3}\' of an existing employee record", name, username, password, retypepassword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 19
- testRunner.Then(string.Format("The record \'{0}\',\'{1}\' and \'{2}\' of an existing material should be updated", code, description, price), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("The record \'{0}\',\'{1}\',\'{2}\' and \'{3}\' of an existing employee should be updated", name, username, password, retypepassword), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("3)Delete existing material record")]
-        public void _3DeleteExistingMaterialRecord()
+        [NUnit.Framework.DescriptionAttribute("3)Delete existing employee record")]
+        public void _3DeleteExistingEmployeeRecord()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3)Delete existing material record", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("3)Delete existing employee record", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 27
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -166,16 +167,16 @@ this.ScenarioInitialize(scenarioInfo);
             {
                 this.ScenarioStart();
 #line 28
- testRunner.Given("I logged into Turnup portal successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I logged into Turnup portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 29
- testRunner.When("I navigate to Time and Material page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I navigate to Employees page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 30
- testRunner.When("I delete an existing Material record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When("I delete an existing employee record", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 31
- testRunner.Then("The record should be deleted successfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("The record should be deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

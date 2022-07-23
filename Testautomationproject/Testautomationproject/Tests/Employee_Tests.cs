@@ -30,7 +30,7 @@ namespace Testautomationproject.Tests
         public void EditEmployee()
         {
             EmployeePage editemployeeobj = new EmployeePage();
-            editemployeeobj.EditEmployee(driver);
+            editemployeeobj.EditEmployee(driver, "p1","p2","p3","p4");
         }
         [Test, Order(3), Description("Check if user is able to delete employee record successfully")]
         public void DeleteEmployeeRecord()
