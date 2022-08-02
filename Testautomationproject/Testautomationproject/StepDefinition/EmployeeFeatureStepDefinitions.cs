@@ -3,7 +3,7 @@ using System;
 using TechTalk.SpecFlow;
 using Testautomationproject.Utilities;
 
-namespace Testautomationproject
+namespace Testautomationproject.StepDefinition
 {
     [Binding]
     public class EmployeeFeatureStepDefinitions : CommonDriver
@@ -48,7 +48,7 @@ namespace Testautomationproject
         [When(@"I update '([^']*)','([^']*)','([^']*)' and '([^']*)' of an existing employee record")]
         public void WhenIUpdateAndOfAnExistingEmployeeRecord(string p0, string p1, string p2, string p3)
         {
-            employeeobj.EditEmployee(driver,p0,p1,p2,p3);
+            employeeobj.EditEmployee(driver, p0, p1, p2, p3);
         }
 
         [Then(@"The record '([^']*)','([^']*)','([^']*)' and '([^']*)' of an existing employee should be updated")]
